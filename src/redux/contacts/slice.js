@@ -45,7 +45,7 @@ const contactsSlice = createSlice({
                     (contact) => contact.id === action.payload.id
                 );
                 contact.name = action.payload.name;
-                contact.phone = action.payload.phone;
+                contact.number = action.payload.number;
             })
             .addCase(editContact.pending, handlePending)
             .addCase(editContact.rejected, handleRejected)
