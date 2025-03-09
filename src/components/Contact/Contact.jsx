@@ -24,7 +24,10 @@ const Contact = ({ id, name, number }) => {
                             defaultValue={name}
                             onChange={(e) => setNameValue(e.target.value)}
                             onBlur={() => {
-                                dispatch(editContact({ id, name: nameValue, number: phoneValue }));
+                                dispatch(
+                                    editContact({ id, name: nameValue, number: phoneValue })
+                                );
+                                // setEditValue(false);
                             }}
                         />
                         <input
@@ -35,19 +38,19 @@ const Contact = ({ id, name, number }) => {
                                 dispatch(
                                     editContact({ id, name: nameValue, number: phoneValue })
                                 );
+                                // setEditValue(false);
                             }}
                         />
                     </div>
                 ) : (
                     <div>
-                        {" "}
                         <div className={s.iconWrapper}>
                             <IoMdContact className={s.icon} size={22} />
-                            <p>{name}</p>
+                            <p>{nameValue}</p>
                         </div>
                         <div className={s.iconWrapper}>
                             <FaPhoneVolume className={s.icon} size={20} />
-                            <p>{number}</p>
+                            <p>{phoneValue}</p>
                         </div>
                     </div>
                 )}

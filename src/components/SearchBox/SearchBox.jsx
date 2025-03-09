@@ -8,7 +8,7 @@ const SearchBox = () => {
     
         return (
             <div className={s.searchWrapper}>
-                <label>Find contacts by name</label>
+                <label>Find contacts by name or phone</label>
                 <div className={s.searchBox}>
                     <MdSearch  className={s.searchIcon} />
                     <input

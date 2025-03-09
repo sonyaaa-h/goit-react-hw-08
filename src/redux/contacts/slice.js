@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { addContact, deleteContact, editContact, fetchContacts } from "./operations";
+import { logoutThunk } from "../auth/operations";
 
 const initialState = {
     items: [],
@@ -47,7 +48,8 @@ const contactsSlice = createSlice({
                 contact.phone = action.payload.phone;
             })
             .addCase(editContact.pending, handlePending)
-            .addCase(editContact.rejected, handleRejected);
+            .addCase(editContact.rejected, handleRejected)
+            .addCase(logoutThunk.fulfilled, () => initialState);
     },
 });
 

@@ -1,12 +1,11 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { api } from "../auth/operations";
 
-
 export const fetchContacts = createAsyncThunk(
     "contacts/fetchAll",
-    async ({signal}, thunkAPI) => {
+    async ({ signal }, thunkAPI) => {
         try {
-            const { data } = await api.get("/contacts", {signal});
+            const { data } = await api.get("/contacts", { signal });
             return data;
         } catch (e) {
             return thunkAPI.rejectWithValue(e.message);
@@ -43,8 +42,10 @@ export const editContact = createAsyncThunk(
     async (body, thunkAPI) => {
         try {
             console.log(body);
-            
-            const { data } = await api.patch(`/contacts/${body.id}`, body);
+            const { data } = await api.patch(`/contacts/${body.id}`, {
+                name: body.name,
+                number: body.number,
+            });
             return data;
         } catch (e) {
             return thunkAPI.rejectWithValue(e.message);
