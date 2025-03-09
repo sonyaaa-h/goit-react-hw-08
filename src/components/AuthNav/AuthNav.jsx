@@ -7,6 +7,8 @@ const buildLinkClass = ({ isActive }) => {
 };
 
 const AuthNav = () => {
+    
+
     return (
         <nav className={s.navigation}>
             <NavLink className={buildLinkClass} to="/register">Register</NavLink>
