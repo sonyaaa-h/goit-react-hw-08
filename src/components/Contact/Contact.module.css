@@ -6,9 +6,9 @@
     align-items: center;
     width: 400px;
     padding: 10px;
-    border: 2px solid #a3477d;
+    border: 2px solid #592f75;
     border-radius: 8px;
-    box-shadow: 2px 2px 4px 4px #d3d3d3;
+    box-shadow: 2px 2px 4px 4px #cf74eb;
 }
 
 .contactInfo{
@@ -34,7 +34,7 @@
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #a3477d;
+    background-color: #7d268f;
     color: #f3ebf0;
 
     transition: all 0.3s ease;
@@ -42,7 +42,7 @@
 
 .button:hover {
     background-color: #f3ebf0;
-    color: #a3477d;
+    color: #7d268f;
 }
 
 .inputWrapper {

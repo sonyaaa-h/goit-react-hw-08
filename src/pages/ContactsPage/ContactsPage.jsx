@@ -5,7 +5,6 @@ import SearchBox from "../../components/SearchBox/SearchBox";
 const ContactsPage = () => {
   return (
     <div>
-      <h1 className="title">Phonebook</h1>
       <ContactForm />
       <SearchBox />
       <ContactList />

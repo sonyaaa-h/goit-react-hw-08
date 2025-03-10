@@ -40,7 +40,7 @@ const LoginPage = () => {
             <Field type="password" name="password" className={s.input} />
           </label>
           <button type="submit">Login</button>
-          <p>Yuo do not have an account? <Link to="/register">Register</Link></p>
+          <p className={s.text}>Yuo do not have an account? <Link to="/register" className={s.link}>Register</Link></p>
         </Form>
       </Formik>
     </div>
